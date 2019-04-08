@@ -1,0 +1,29 @@
+{
+	"name": "todo_rest_api",
+	"version": "1.0.0",
+	"description": "A rest api for todo app",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"server": "node app",
+		"dev-server": "nodemon app"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/supriyanta/todo_rest_api.git"
+	},
+	"author": "supriyanta34@gmail.com",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/supriyanta/todo_rest_api/issues"
+	},
+	"homepage": "https://github.com/supriyanta/todo_rest_api#readme",
+	"dependencies": {
+		"bcrypt": "^3.0.5",
+		"express": "^4.16.4",
+		"mongoose": "^5.4.23"
+	},
+	"devDependencies": {
+		"nodemon": "^1.18.10"
+	}
+}
