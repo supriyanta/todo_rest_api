@@ -7,9 +7,10 @@ const TodoSchema = new mongoose.Schema({
 		required: true,
 		trim: true
 	},
-	description: {
-		type: String,
-		trim: true
+	completed: {
+		type: Boolean,
+		required: true,
+		default: false
 	},
 	createdAt: {
 		type: Date,

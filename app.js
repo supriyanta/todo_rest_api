@@ -2,19 +2,24 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const authRouter = require("./routes/authRoutes");
 const todoRouter = require("./routes/todoRoutes");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
-const mongoDbUrl = "mongodb://localhost/todo_rest_api";
+const mongoDbUrl = "mongodb+srv://supriyanta34:iEqoQv5pUzVgK6wc@cluster0.fsevq.mongodb.net/db1?retryWrites=true&w=majority";
 mongoose
-	.connect(mongoDbUrl, { useNewUrlParser: true })
+	.connect(mongoDbUrl, { 
+		useNewUrlParser: true,
+		useUnifiedTopology: true 
+	})
 	.then(() => console.log("DB connected!"))
-	.catch(e => console.log("DB connection failed!"));
+	.catch(e => console.log("DB connection failed!", e));
 mongoose.set("useCreateIndex", true);
 
 app.get("/", (req, res) => {
